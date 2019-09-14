@@ -5,7 +5,8 @@ import java.awt.event.*;
  class tictactoe extends JFrame implements ActionListener 
  {  
 
-	JFrame f; 
+	JFrame f ; 
+	JPanel p = new JPanel();
 	 //b[row][column] 
 	JButton b[][]=new JButton[3][3];
 	JButton src = new JButton();
@@ -13,7 +14,8 @@ import java.awt.event.*;
 	Font font;
 	tictactoe()
 	{
-		f=new JFrame(); 
+		
+		f=new JFrame("Tic Tac Toe"); 
 
     	//b[row][column] 
       
@@ -23,7 +25,7 @@ import java.awt.event.*;
     	    {
     	        b[i][j] = new JButton();
     	        f.add(b[i][j]);
-    	        b[i][j].setText(" ");
+    	        b[i][j].setText("");
     	        
     	        if((j+1)%2==0 && (i+1)%2==0) 
     	            b[i][j].setBackground(Color.gray);
@@ -82,56 +84,56 @@ import java.awt.event.*;
 		cnt++;
 		int input=2;
 				
-		if(b[0][0].getText()==b[1][1].getText()&&b[0][0].getText()==b[2][2].getText()&&b[0][0].getText()!=" ")
+		if(b[0][0].getText()==b[1][1].getText()&&b[0][0].getText()==b[2][2].getText()&&b[0][0].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[0][0].getText()==b[0][1].getText()&&b[0][2].getText()==b[0][0].getText()&&b[0][0].getText()!=" ")
+		else if(b[0][0].getText()==b[0][1].getText()&&b[0][2].getText()==b[0][0].getText()&&b[0][0].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[0][0].getText()==b[1][0].getText()&&b[2][0].getText()==b[0][0].getText()&&b[0][0].getText()!=" ")
+		else if(b[0][0].getText()==b[1][0].getText()&&b[2][0].getText()==b[0][0].getText()&&b[0][0].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[1][0].getText()==b[1][1].getText()&&b[1][2].getText()==b[1][0].getText()&&b[1][0].getText()!=" ")
+		else if(b[1][0].getText()==b[1][1].getText()&&b[1][2].getText()==b[1][0].getText()&&b[1][0].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[1][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[0][1].getText()==b[1][1].getText()&&b[2][1].getText()==b[1][1].getText()&&b[1][1].getText()!=" ")
+		else if(b[0][1].getText()==b[1][1].getText()&&b[2][1].getText()==b[1][1].getText()&&b[1][1].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[0][1].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		if(b[2][2].getText()==b[1][2].getText()&&b[2][2].getText()==b[0][2].getText()&&b[0][2].getText()!=" ")
+		if(b[2][2].getText()==b[1][2].getText()&&b[2][2].getText()==b[0][2].getText()&&b[0][2].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[0][2].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[2][2].getText()==b[2][1].getText()&&b[2][2].getText()==b[2][0].getText()&&b[2][0].getText()!=" ")
+		else if(b[2][2].getText()==b[2][1].getText()&&b[2][2].getText()==b[2][0].getText()&&b[2][0].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
 			else if(input == 0)restart();
 			//input = 2;
 		}
-		else if(b[2][0].getText()==b[1][1].getText()&&b[1][1].getText()==b[0][2].getText()&&b[0][2].getText()!=" ")
+		else if(b[2][0].getText()==b[1][1].getText()&&b[1][1].getText()==b[0][2].getText()&&b[0][2].getText()!="")
 		{
 			input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
 			if(input == 1)System.exit(0);
