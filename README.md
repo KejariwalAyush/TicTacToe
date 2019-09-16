@@ -1,11 +1,15 @@
 # TicTacToe
 simple tic-tac-toe game in java
 
-Limitations:->  cannot restart the game in between
+ 
 
-Features :->  when game is finished asks for restart or exit
+#Features 	:->  when game is finished asks for restart or exit
+	:->  cannot restart the game in between
 
-to Run the program 
+#Note	 :-> this program will not work on online java compiler 
+	      it will work only for offline java compiler 
+
+#To Run the program 
 step 1 : first install jdk in your system and to check if it is installed type "java --version" -> then it will show its java version. 
 
 step 2 : download tictactoe.class file.
