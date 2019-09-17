@@ -3,26 +3,29 @@ simple tic-tac-toe game in java
 
  
 
-#Features 	:->  when game is finished asks for restart or exit
-	:->  cannot restart the game in between
+# Features 	
+	:->  when game is finished asks for restart or exit
+	:->  can restart the game in between
 
-#Note	 :-> this program will not work on online java compiler 
+# Note	 
+	:-> this program will not work on online java compiler 
 	      it will work only for offline java compiler 
 
-#To Run the program 
-step 1 : first install jdk in your system and to check if it is installed type "java --version" -> then it will show its java version. 
+# To Run the program 
 
-step 2 : download tictactoe.class file.
+	step 1 : first install jdk in your system and to check if it is installed type "java --version" -> then it will show its java version. 
 
-step 3 : copy file to the desktop.
+	step 2 : download tictactoe.class file.
 
-step 4 : open command prompt. 
+	step 3 : copy file to the desktop.
 
-step 5 : type command "cd desktop".
+	step 4 : open command prompt. 
 
-step 6 : then type "java tictactoe".
+	step 5 : type command "cd desktop".
 
-the game will start
-ENJOY  THE  GAME  !!!!!
+	step 6 : then type "java tictactoe".
+
+	the game will start
+	ENJOY  THE  GAME  !!!!!
 
 
