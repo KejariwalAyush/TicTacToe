@@ -20,8 +20,8 @@ import java.awt.event.*;
     {
         
         f=new JFrame("Tic Tac Toe"); 
-         file = new JMenu("File");
-        //mb.addActionListener(this);
+        file = new JMenu("File");
+        
         rs = new JMenuItem ("Restart");
         rs.addActionListener(this);
         file.add(rs);
@@ -85,86 +85,89 @@ import java.awt.event.*;
         if(e.getSource() instanceof JButton)
             src = (JButton)e.getSource();
         
-        
-        if(cnt%2!=0)
-        {
-            src.setText("o");
-            src.setFont(font);
-            
-        }
-        if(cnt%2==0)
-        {
-            src.setText("x");
-            src.setFont(font);
-            
-        }
-        cnt++;
-        int input=2;
-                
-        if(b[0][0].getText()==b[1][1].getText()&&b[0][0].getText()==b[2][2].getText()&&b[0][0].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[0][0].getText()==b[0][1].getText()&&b[0][2].getText()==b[0][0].getText()&&b[0][0].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[0][0].getText()==b[1][0].getText()&&b[2][0].getText()==b[0][0].getText()&&b[0][0].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[1][0].getText()==b[1][1].getText()&&b[1][2].getText()==b[1][0].getText()&&b[1][0].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[1][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[0][1].getText()==b[1][1].getText()&&b[2][1].getText()==b[1][1].getText()&&b[1][1].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[0][1].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        if(b[2][2].getText()==b[1][2].getText()&&b[2][2].getText()==b[0][2].getText()&&b[0][2].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[0][2].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[2][2].getText()==b[2][1].getText()&&b[2][2].getText()==b[2][0].getText()&&b[2][0].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(b[2][0].getText()==b[1][1].getText()&&b[1][1].getText()==b[0][2].getText()&&b[0][2].getText()!="")
-        {
-            input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        else if(cnt==9)
-        {
-            input = JOptionPane.showConfirmDialog(f,"draw\n want to restart ?");
-            if(input == 1)System.exit(0);
-            else if(input == 0)restart();
-            //input = 2;
-        }
-        
+      if(src.getText()!=""){JOptionPane.showMessageDialog(f,"invalid move"); }
+      else
+      {
+       		 if(cnt%2!=0)
+       		 {
+       		     src.setText("o");
+      		      src.setFont(font);
+     		       
+       		 }
+      		  if(cnt%2==0)
+       		 {
+     		       src.setText("x");
+      		      src.setFont(font);
+     		       
+        		}
+        		cnt++;
+        		int input=2;
+      		          
+        		if(b[0][0].getText()==b[1][1].getText()&&b[0][0].getText()==b[2][2].getText()&&b[0][0].getText()!="")
+       		 {
+        		    input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
+      		      if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+       		 }
+       		 else if(b[0][0].getText()==b[0][1].getText()&&b[0][2].getText()==b[0][0].getText()&&b[0][0].getText()!="")
+       		 {
+       		     input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+       		 }
+       		 else if(b[0][0].getText()==b[1][0].getText()&&b[2][0].getText()==b[0][0].getText()&&b[0][0].getText()!="")
+      		  {
+       		     input = JOptionPane.showConfirmDialog(f, b[0][0].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+      		      //input = 2;
+      		  }
+       		 else if(b[1][0].getText()==b[1][1].getText()&&b[1][2].getText()==b[1][0].getText()&&b[1][0].getText()!="")
+       		 {
+      		      input = JOptionPane.showConfirmDialog(f, b[1][0].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+       		 }
+       		 else if(b[0][1].getText()==b[1][1].getText()&&b[2][1].getText()==b[1][1].getText()&&b[1][1].getText()!="")
+       		 {
+       		     input = JOptionPane.showConfirmDialog(f, b[0][1].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+       		 }
+
+       		 if(b[2][2].getText()==b[1][2].getText()&&b[2][2].getText()==b[0][2].getText()&&b[0][2].getText()!="")
+       		 {
+      		      input = JOptionPane.showConfirmDialog(f, b[0][2].getText()+" won \n want to restart?");
+     		       if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+      		      //input = 2;
+       		 }
+      		  else if(b[2][2].getText()==b[2][1].getText()&&b[2][2].getText()==b[2][0].getText()&&b[2][0].getText()!="")
+       		 {
+       		     input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+      		  }
+       		 else if(b[2][0].getText()==b[1][1].getText()&&b[1][1].getText()==b[0][2].getText()&&b[0][2].getText()!="")
+       		 {
+       		     input = JOptionPane.showConfirmDialog(f, b[2][0].getText()+" won \n want to restart?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+       		     //input = 2;
+      		  }
+       		 else if(cnt==9)
+       		 {
+       		     input = JOptionPane.showConfirmDialog(f,"draw\n want to restart ?");
+       		     if(input == 1)System.exit(0);
+       		     else if(input == 0)restart();
+      		      //input = 2;
+       		 }
+       }
     }
     public void restart()
     {
