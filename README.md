@@ -1,10 +1,11 @@
 # TicTacToe
-simple tic-tac-toe game in java
+simple tic-tac-toe game in java with added gui
 
  
 
 # Features 	
 	:->  when game is finished asks for restart or exit
+	:->  an entry page with animation
 	:->  can restart the game in between
 
 # Note	 
